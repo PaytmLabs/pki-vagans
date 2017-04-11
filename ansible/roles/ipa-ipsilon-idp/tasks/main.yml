@@ -8,8 +8,6 @@
   with_items:
     - ipsilon
     - ipsilon-saml2
-    - ipsilon-openid
-    - ipsilon-openidc
     - ipsilon-persona
     - ipsilon-authform
     - ipsilon-infosssd
@@ -42,7 +40,6 @@
     ipsilon-server-install
       --admin-user admin
       --secure yes
-      --openid yes
       --persona yes
       --saml2 yes
       --saml2-metadata-validity 185
