@@ -5,7 +5,7 @@ Vagrant.require_version ">= 1.6.0"
 
 DOMAIN="ipa.example"
 INSTALL_IDP = true
-INSTALL_VPN = false
+INSTALL_VPN = true
 
 HERE = File.dirname(__FILE__)
 ENV['ANSIBLE_CONFIG'] = "#{HERE}/../ansible/ansible.cfg"
