@@ -14,6 +14,7 @@
     - sssd-dbus
     - mod_nss
     - mod_session
+    - mod_wsgi
   when: package_install
   notify:
     - restart httpd
