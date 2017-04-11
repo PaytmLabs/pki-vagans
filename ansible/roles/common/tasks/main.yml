@@ -29,12 +29,13 @@
   command: timedatectl set-timezone UTC
   when: "'Time zone: UTC' not in timedatectl.stdout"
 
-# package manager
-- include: dnf.yml
-  when: dnf_package
+- name: Setup package manager (Fedora)
+  include: pkg-mgr-setup-fedora.yml
+  when: ansible_distribution == 'Fedora'
 
-- include: yum.yml
-  when: not dnf_package
+- name: Setup package manager (CentOS)
+  include: yum-centos.yml
+  when: ansible_distribution == 'CentOS'
 
   # copr
 - name: Install gpg command for COPR / rpm_key

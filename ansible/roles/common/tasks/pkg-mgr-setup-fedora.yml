@@ -1,0 +1,6 @@
+# package manager
+- include: dnf-fedora.yml
+  when: dnf_package
+
+- include: yum-fedora.yml
+  when: not dnf_package
