@@ -1,12 +1,4 @@
 ---
-- name: install epel repository
-  tags:
-    - ipa-vpnserver
-    - package-install
-    - network
-  yum: name=epel-release state=present
-  when: package_install
-
 - name: install ocserv VPN server
   tags:
     - ipa-vpnserver

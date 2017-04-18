@@ -1,4 +1,12 @@
 ---
+- name: install epel repository
+  tags:
+    - common
+    - package-install
+    - network
+  yum: name=epel-release state=present
+  when: package_install
+
 - name: Ensure yum-utils are available
   tags:
     - common
