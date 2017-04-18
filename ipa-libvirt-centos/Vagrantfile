@@ -113,6 +113,8 @@ Vagrant.configure(2) do |config|
                 "ipa_rpm_dir" => HERE + '/rpms',
                 "package_install" => true,
                 "package_upgrade" => true,
+                "ipa_replica_ca" => true,
+                "ipa_replica_kra" => true,
                 "custom_rpms" => false,
                 "coprs_enabled" => [
                     # "@freeipa/freeipa-master",
