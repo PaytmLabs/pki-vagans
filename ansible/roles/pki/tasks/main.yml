@@ -1,4 +1,13 @@
 ---
+- name: copy pki.repo to /etc/yum.repos.d
+  tags:
+    - pki
+    - package-install
+    - network
+  copy:
+    src=pki.repo
+    dest=/etc/yum.repos.d/pki.repo
+
 - name: install pki-server packages and dependencies
   tags:
     - pki
@@ -6,6 +15,8 @@
     - network
   yum: name={{ item }} state=present
   with_items:
+    - dogtag-pki-server-theme
+    - dogtag-pki-console-theme
     - pki-server
     - openssl
   when: package_install
